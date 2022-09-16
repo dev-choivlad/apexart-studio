@@ -1,0 +1,1 @@
+"use strict";window.addEventListener("load",(function(e){console.log("the page is loaded!")}));
