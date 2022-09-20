@@ -1,0 +1,131 @@
+// ===== Structure starts ===== //
+body {
+  background-color: $bg-color;
+}
+
+.main-wrapper {
+  position: relative;
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-content {
+  display: flex;
+}
+// ===== Structure ends ===== //
+
+
+// ===== Typography starts ===== //
+.main-heading-h1 {
+  @include adaptive-font(100, 60);
+}
+.main-heading-h2 {
+  @include adaptive-font(24, 20);
+  color: $color-primary;
+}
+.main-heading-h3 {
+  @include adaptive-font(60, 40);
+}
+.main-text-welcome {
+  @include adaptive-font(24, 20);
+}
+.main-text-desc {
+  @include adaptive-font(20, 14);
+}
+.main-text-content {
+  @include adaptive-font(16, 14);
+}
+.main-text-btn {
+  font-size: 14px;
+}
+// ===== Typography ends ===== //
+
+
+// ===== Element basics starts ===== //
+a,
+button {
+  transition: all 0.3s ease-in-out;
+}
+.btn-basic {
+  max-width: 180px;
+  min-width: 160px;
+  padding: 10px 0;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  font-family: $font-text-regular;
+  color: $color-accent;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.visually-hidden {
+  position: absolute;
+  top: -230%;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+.img-basic {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.img-basic--icon {
+  width: 20px;
+}
+// ===== Element basics ends ===== //
+
+
+// ===== Section Main starts ===== //
+#section-main {
+  //background-color: lightblue;
+  background-image: url("/img/bg-main-section-2.jpeg");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: 50%;
+}
+
+.greetings {
+  @include centering-xy;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  color: #ffffff;
+  z-index: 5;
+}
+
+.greetings__welcome {
+  //text-transform: uppercase;
+  font-family: $font-text-regular;
+  margin-bottom: 30px;
+}
+
+.greetings__name {
+  font-family: $font-heading-bold;
+  margin-bottom: 15px;
+}
+
+.greetings__desc {
+  width: 60%;
+  font-family: $font-text-regular;
+  line-height: 30px;
+  margin: 0 auto 50px auto;
+}
+
+.btn-basic--contact {
+  margin: 0 auto;
+
+  &:hover {
+    background-color: transparent;
+    color: #ffffff;
+  }
+}
+
+// ===== Section Main ends ===== //

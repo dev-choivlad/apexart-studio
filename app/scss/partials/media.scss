@@ -1,0 +1,71 @@
+@media screen and (max-width: 768px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  // === Header navigation menu starts ===
+  .burger-button {
+    display: block;
+  }
+
+  .swiper-pagination.nav-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightpink;
+    overflow-y: auto;
+    z-index: 8;
+
+    &.active {
+      display: flex;
+      top: 50%;
+    }
+  }
+
+  .swiper-container {
+    .swiper-pagination {
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+  // === Header navigation menu ends === //
+
+  // === Section main starts === //
+  #section-main {
+    background-size: cover;
+    background-position: 50%;
+  }
+
+  .greetings__desc {
+    width: 100%;
+  }
+  // === Section main ends === //
+}
+
+
+// above 1440px
+@media screen and(min-width: 1441px) {
+  .main-heading-h1 {
+    font-size: 100px;
+  }
+  .main-heading-h2 {
+    font-size: 24px;
+  }
+  .main-heading-h3 {
+    font-size: 60px;
+  }
+  .main-text-welcome {
+    font-size: 24px;
+  }
+  .main-text-desc {
+    font-size: 20px;
+  }
+  .main-text-content {
+    font-size: 16px;
+  }
+}
