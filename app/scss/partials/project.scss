@@ -13,33 +13,77 @@ body {
 .main-content {
   display: flex;
 }
+
+.flex-container,
+.flex-container--reverse {
+  display: flex;
+}
+.flex-container--reverse {
+  .slide-left {
+    order: 2;
+  }
+  .slide-right {
+    order: 1;
+  }
+}
+.slide-left,
+.slide-right {
+  width: 50%;
+  display: flex;
+}
+.slide-left {
+  position: relative;
+  overflow-y: hidden;
+}
+.slide-right {
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+.slide-right__inner {
+  height: 75%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
 // ===== Structure ends ===== //
+
 
 
 // ===== Typography starts ===== //
 .main-heading-h1 {
-  @include adaptive-font(100, 60);
+  font-family: $font-heading-bold;
+  @include adaptive-font(90, 60);
 }
 .main-heading-h2 {
+  font-family: $font-heading-bold;
   @include adaptive-font(24, 20);
   color: $color-primary;
 }
 .main-heading-h3 {
-  @include adaptive-font(60, 40);
+  font-family: $font-heading-regular;
+  @include adaptive-font(60, 35);
 }
 .main-text-welcome {
+  font-family: $font-text-regular;
   @include adaptive-font(24, 20);
 }
 .main-text-desc {
+  font-family: $font-text-light;
   @include adaptive-font(20, 14);
 }
 .main-text-content {
+  font-family: $font-text-regular;
   @include adaptive-font(16, 14);
+  line-height: 30px;
 }
 .main-text-btn {
   font-size: 14px;
 }
 // ===== Typography ends ===== //
+
 
 
 // ===== Element basics starts ===== //
@@ -102,21 +146,17 @@ button {
 }
 
 .greetings__welcome {
-  //text-transform: uppercase;
-  font-family: $font-text-regular;
   margin-bottom: 30px;
 }
 
 .greetings__name {
-  font-family: $font-heading-bold;
   margin-bottom: 15px;
 }
 
 .greetings__desc {
   width: 60%;
-  font-family: $font-text-regular;
   line-height: 30px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 30px auto;
 }
 
 .btn-basic--contact {
@@ -127,5 +167,64 @@ button {
     color: #ffffff;
   }
 }
-
 // ===== Section Main ends ===== //
+
+
+
+// ===== Section Studio starts ===== //
+.slide-left__studio {
+
+}
+
+.slide-right__heading {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 15%;
+
+  &::after {
+    content: "";
+    @include centering-x;
+    top: 90px;
+    height: 3px;
+    width: 20%;
+    background-color: $color-accent;
+  }
+}
+
+.img-basic--studio {
+  top: 10% !important;
+}
+
+.slide-right__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: $font-text-light;
+  margin-bottom: 20%;
+
+  span,
+  a {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  span::before,
+  a::before {
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+    left: -40px;
+  }
+
+  span::before {
+    content: url("/img/icon-clock.png");
+  }
+  a:nth-child(2)::before {
+    content: url("/img/icon-geo.png");
+  }
+}
+// ===== Section Studio ends ===== //

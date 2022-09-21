@@ -2,6 +2,9 @@
   body.lock {
     overflow: hidden;
   }
+  .main-text-content {
+    line-height: 25px;
+  }
 
   // === Header navigation menu starts ===
   .burger-button {
@@ -35,6 +38,7 @@
   }
   // === Header navigation menu ends === //
 
+
   // === Section main starts === //
   #section-main {
     background-size: cover;
@@ -45,13 +49,55 @@
     width: 100%;
   }
   // === Section main ends === //
+
+
+  // === Section studio starts === //
+  .flex-container,
+  .flex-container--reverse {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-container--reverse {
+    .slide-left {
+      order: 1;
+    }
+    .slide-right {
+      order: 2;
+    }
+  }
+  .slide-left,
+  .slide-right {
+    width: 100%;
+  }
+  .slide-left {
+    height: 40%;
+  }
+  .slide-right {
+    height: 60%;
+  }
+  .slide-right__inner {
+    height: 90%;
+    width: 90%;
+  }
+  .img-basic--studio {
+    top: -15px !important;
+  }
+  .slide-right__heading {
+    &::after {
+      top: 60px;
+    }
+  }
+  .slide-right__contact {
+    margin-bottom: 2%
+  }
+  // === Section studio ends === //
 }
 
 
 // above 1440px
 @media screen and(min-width: 1441px) {
   .main-heading-h1 {
-    font-size: 100px;
+    font-size: 90px;
   }
   .main-heading-h2 {
     font-size: 24px;
