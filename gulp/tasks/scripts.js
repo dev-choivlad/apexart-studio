@@ -7,8 +7,13 @@ const mode = require('gulp-mode')();
 const paths = require('../paths');
 
 const jsFiles = [
-  './././app/js/burger-btn.js',
+  './././app/js/burger.js',
+  './././app/js/anim-header.js',
+  './././app/js/nav-btn-states-toggle.js',
+  './././app/js/anim-on-scroll.js',
+  './././app/js/anchor-scrolling.js',
   './././app/js/swiper-init.js',
+  './././app/js/contact-form.js',
 ] // очередность подключения файлов
 
 const scripts = () => {

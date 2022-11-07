@@ -1,0 +1,38 @@
+.flex-container--schedule {
+  flex-direction: column;
+}
+
+.schedule {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  background-color: darken(gainsboro, 5%);
+  color: #ffffff;
+  padding: 30px 15px;
+}
+
+.schedule-row {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.day {
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 30%;
+}
+.time {
+  flex-direction: column;
+  width: 65%;
+  align-items: flex-start;
+  justify-content: center;
+}
+.day,
+.time {
+  display: flex;
+}

@@ -1,0 +1,29 @@
+.flex-container--founder {
+  flex-direction: column;
+}
+
+.img-basic--founder {
+  width: 300px;
+  border-radius: 50%;
+}
+
+.founder-achievements {
+  font-family: $font-heading-regular;
+}
+.achievement {
+  text-align: center;
+  display: block;
+  &:not(last-child) {
+    margin-bottom: 7px;
+  }
+}
+
+.founder-bio {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto 30px auto;
+
+  p:not(last-child) {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,27 @@
+.main-page {
+  height: 100vh;
+}
+
+.main-wrapper--main {
+  position: relative;
+  background-image: url("../img/main-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: 58%;
+  background-position: 50%;
+}
+
+.greetings {
+  @include centering-x;
+  top: 28%;
+  width: fit-content;
+  color: $bg-color;
+  text-align: center;
+}
+
+.greetings__subheading {
+  margin-bottom: 30px;
+}
+
+.greetings__heading {
+  margin-bottom: 20px;
+}

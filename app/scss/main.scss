@@ -1,14 +1,18 @@
-@import "./partials/fonts";
-@import "./partials/normalize";
-@import "./partials/variables";
-@import "./partials/basic";
-@import "./partials/mixins";
-@import "./partials/swiper-custom";
+@import "partials/fonts";
+@import "partials/normalize";
+@import "partials/variables";
+@import "partials/basic";
+@import "partials/mixins";
+@import "partials/common";
 
-@import "./partials/project";
-@import "./partials/header";
-//@import "./partials/footer";
+@import "partials/swiper-custom";
+@import "partials/header";
+@import "partials/main";
+@import "partials/about-studio";
+@import "partials/founder";
+@import "partials/about-classes";
+@import "partials/classes-schedule";
+@import "partials/contact";
+@import "partials/footer";
 
-
-
-@import "./partials/media";
+@import "partials/media";

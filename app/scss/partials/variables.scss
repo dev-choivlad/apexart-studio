@@ -1,5 +1,7 @@
 // ---------- variables ------------------------------------
 $max-width: 1440px;
+$header-height-desk: 85px;
+$header-height-mob: 55px;
 
 $bg-color: #ffffff;
 $color-primary: #222222;
@@ -12,9 +14,5 @@ $font-heading-regular: "LibreBodoni-Regular", serif;
 $font-text-regular: "OpenSans-Regular", Arial sans-serif;
 $font-text-light: "OpenSans-Light", Arial sans-serif;
 
-$padding-header-desk: 10px 20px;
-$padding-header-mob: 10px 15px;
-
-$padding-info-desk: 50px 20px;
-$padding-info-mob: 30px 15px;
-$padding-banner-mob: 0;
+$padding-desk: 50px 20px;
+$padding-mob: 40px 15px;

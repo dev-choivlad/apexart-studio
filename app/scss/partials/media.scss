@@ -2,108 +2,156 @@
   body.lock {
     overflow: hidden;
   }
-  .main-text-content {
-    line-height: 25px;
+
+  .main-wrapper {
+    padding: $padding-mob;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .flex-container__left,
+  .flex-container__right {
+    width: 100%;
+    height: auto;
+  }
+
+  .flex-container__right {
+    .flex-container__inner {
+      flex-direction: column;
+      padding: 20px 15px 10px 15px;
+    }
   }
 
   // === Header navigation menu starts ===
+  .main-header {
+    height: $header-height-mob;
+  }
+
+  .main-content {
+    padding: 5px 20px;
+  }
+  .company-logo {
+    width: 40px;
+  }
+  .main-header.animated {
+    height: 55px;
+
+    .company-logo {
+      transform: scale(1);
+    }
+  }
   .burger-button {
     display: block;
   }
-
-  .swiper-pagination.nav-menu {
-    display: none;
-    flex-direction: column;
+  .nav-menu {
     position: fixed;
     top: -100%;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: lightpink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-color;
     overflow-y: auto;
     z-index: 8;
 
     &.active {
-      display: flex;
-      top: 50%;
+      top: 0;
     }
   }
-
-  .swiper-container {
-    .swiper-pagination {
-      span {
-        font-size: 24px;
+  .nav-menu__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .nav-menu__item {
+    &:not(.nav-menu__item:last-child) {
+      margin-right: 0;
+      margin-bottom: 15px
+    }
+    &:last-child {
+      a {
+        padding-right: 16px;
       }
     }
   }
-  // === Header navigation menu ends === //
+  .nav-menu__link {
+    padding: 10px 16px;
+    font-size: 20px;
+  }
+  // === Header navigation menu ends ===
 
 
-  // === Section main starts === //
-  #section-main {
+  // === #1 Main page starts ===
+  .main-wrapper--studio {
+    padding: 15px 0;
+  }
+  .main-wrapper--main {
     background-size: cover;
     background-position: 50%;
   }
+  .greetings {
+    width: 94%;
+    top: 23%;
+  }
+  // === #1 Main page ends ===
 
-  .greetings__desc {
-    width: 100%;
-  }
-  // === Section main ends === //
 
-
-  // === Section studio starts === //
-  .flex-container,
-  .flex-container--reverse {
-    display: flex;
-    flex-direction: column;
-  }
-  .flex-container--reverse {
-    .slide-left {
-      order: 1;
-    }
-    .slide-right {
-      order: 2;
-    }
-  }
-  .slide-left,
-  .slide-right {
-    width: 100%;
-  }
-  .slide-left {
-    height: 40%;
-  }
-  .slide-right {
-    height: 60%;
-  }
-  .slide-right__inner {
-    height: 90%;
-    width: 90%;
+  // === #2 About studio starts ===
+  .section-heading {
+    margin-bottom: 30px;
   }
   .img-basic--studio {
-    top: -15px !important;
+    position: relative;
+    top: 0;
   }
-  .slide-right__heading {
+  .sub-heading {
     &::after {
-      top: 60px;
+      top: 40px;
     }
   }
-  .slide-right__contact {
-    margin-bottom: 2%
+  // === #2 About studio ends ===
+
+
+  // === #3 About founder starts ===
+  .img-basic--founder {
+    width: 240px;
   }
-  // === Section studio ends === //
+  // === #3 About founder ends ===
+
+
+  // === #4 About classes starts
+  .main-wrapper--classes {
+    padding: 15px 0;
+  }
+  .img-basic--classes {
+    top: 0;
+  }
+  // === #4 About classes ends
 }
 
 
 // above 1440px
 @media screen and(min-width: 1441px) {
+  // === Header navigation menu starts ===
+  .nav-menu__link {
+    font-size: 15px;
+  }
+  // === Header navigation menu ends ===
+
   .main-heading-h1 {
     font-size: 90px;
   }
   .main-heading-h2 {
-    font-size: 24px;
+    font-size: 60px;
+
   }
   .main-heading-h3 {
-    font-size: 60px;
+    font-size: 40px;
   }
   .main-text-welcome {
     font-size: 24px;
@@ -113,5 +161,8 @@
   }
   .main-text-content {
     font-size: 16px;
+  }
+  .main-text-content--address {
+    font-size: 18px;
   }
 }
