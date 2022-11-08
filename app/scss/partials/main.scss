@@ -4,15 +4,14 @@
 
 .main-wrapper--main {
   position: relative;
-  background-image: url("../img/main-banner.jpg");
-  background-repeat: no-repeat;
-  background-size: 58%;
-  background-position: 50%;
+  //background: rgb(167,190,251);
+  //background: linear-gradient(180deg, rgba(167,190,251,1) 0%, rgba(90,120,230,1) 47%, rgba(54,77,195,1) 100%);
+  background: rgb(167,190,251);
+  background: linear-gradient(180deg, rgba(167,190,251,1) 4%, rgba(90,120,230,1) 58%, rgba(54,77,195,1) 100%);
 }
 
 .greetings {
-  @include centering-x;
-  top: 28%;
+  @include centering-xy;
   width: fit-content;
   color: $bg-color;
   text-align: center;
