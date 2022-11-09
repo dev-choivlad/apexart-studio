@@ -1,4 +1,4 @@
-(function () {
+;(function () {
   const header = document.querySelector(".main-header");
   let yOffset = 0;
   let triggerPoint = 450;

@@ -94,7 +94,8 @@
     bottom: 0;
     height: 3px;
     width: 100%;
-    transform: translateX(-200%);
+    opacity: 0;
+    visibility: hidden;
     background-color: $color-accent;
     transition: all 0.25s ease-in-out;
   }
@@ -103,7 +104,8 @@
     color: gray;
 
     &::before {
-      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -111,7 +113,8 @@
     color: gray;
 
     &::before {
-      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
